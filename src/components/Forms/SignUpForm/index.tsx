@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Button, Icon, Input, Stack, Text } from 'native-base';
+import { Button, Icon, Input, Stack } from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-export function SignInForm() {
+export function SignUpForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading] = useState(false);
 
@@ -48,23 +48,12 @@ export function SignInForm() {
         }
         placeholder="Senha"
       />
-      <Text fontSize={'xs'} alignSelf={'flex-start'}>
-        Esqueceu sua senha?
-      </Text>
       <Button
         color={'primary.500'}
         rounded={10}
-        leftIcon={
-          <Icon
-            as={<MaterialIcons name="login" />}
-            size={5}
-            ml="2"
-            color="white"
-          />
-        }
         isLoading={isLoading}
         isLoadingText="Entrando...">
-        Entrar
+        Cadastrar
       </Button>
     </Stack>
   );
