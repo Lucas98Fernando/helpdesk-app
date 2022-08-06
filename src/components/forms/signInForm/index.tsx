@@ -2,16 +2,21 @@ import React, { useState } from 'react';
 import { Button, Icon, Input, Stack, Text } from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
+import { useSignIn } from '../../../hooks/auth';
 
 export function SignInForm() {
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const { loading, showPassword, setShowPassword, handleSignIn } = useSignIn();
 
   const navigation: Record<any, any> = useNavigation();
 
   return (
     <Stack space={5} w="100%" alignItems="center">
       <Input
+        value={email}
+        onChangeText={setEmail}
         rounded={10}
         isFullWidth
         InputLeftElement={
@@ -25,6 +30,8 @@ export function SignInForm() {
         placeholder="E-mail"
       />
       <Input
+        value={password}
+        onChangeText={setPassword}
         rounded={10}
         isFullWidth
         type={showPassword ? 'text' : 'password'}
@@ -69,8 +76,9 @@ export function SignInForm() {
             color="white"
           />
         }
-        isLoading={isLoading}
-        isLoadingText="Entrando...">
+        isLoading={loading}
+        isLoadingText="Entrando..."
+        onPress={() => handleSignIn({ email, password })}>
         Entrar
       </Button>
     </Stack>

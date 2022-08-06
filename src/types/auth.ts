@@ -1,5 +1,9 @@
 import { ImageSourcePropType } from 'react-native';
 
+export type RecoverPassword = {
+  email: string;
+};
+
 export type User = {
   email: string;
   password: string;
