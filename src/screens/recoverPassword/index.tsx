@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heading, Stack, Text } from 'native-base';
-import { RecoverPasswordForm } from '@components/forms/recoverPassword';
+import { RecoverPasswordForm } from '@components/forms/recoverPasswordForm';
 import { AuthLayout } from '@layouts/auth';
 import { images } from '@config/images';
 
