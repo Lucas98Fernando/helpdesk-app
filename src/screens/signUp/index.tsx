@@ -7,11 +7,11 @@ import { images } from '@config/images';
 export function SignUp() {
   return (
     <AuthLayout
-      imageURI={images.SupportOperator}
+      imageURI={images.support_operator}
       textFooter="Já possui conta?"
       textFooterAction="Entrar"
       routeToNavigate={'signIn'}>
-      <Stack mb={6} space={4}>
+      <Stack mb={6} space={2}>
         <Heading>Cadastre-se</Heading>
         <Text color={'gray.700'}>Crie sua conta gratuitamente</Text>
       </Stack>

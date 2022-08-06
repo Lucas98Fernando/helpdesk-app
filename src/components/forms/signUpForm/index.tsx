@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import { Button, Icon, Input, Stack } from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { useSignUp } from '../../../hooks/auth';
 
 export function SignUpForm() {
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const { loading, showPassword, setShowPassword, handleSignUp } = useSignUp();
 
   return (
     <Stack space={5} w="100%" alignItems="center">
       <Input
+        value={email}
+        onChangeText={setEmail}
         rounded={10}
         isFullWidth
         InputLeftElement={
@@ -22,6 +27,8 @@ export function SignUpForm() {
         placeholder="E-mail"
       />
       <Input
+        value={password}
+        onChangeText={setPassword}
         rounded={10}
         isFullWidth
         type={showPassword ? 'text' : 'password'}
@@ -51,8 +58,9 @@ export function SignUpForm() {
       <Button
         color={'primary.500'}
         rounded={10}
-        isLoading={isLoading}
-        isLoadingText="Entrando...">
+        isLoading={loading}
+        isLoadingText="Entrando..."
+        onPress={() => handleSignUp({ email, password })}>
         Cadastrar
       </Button>
     </Stack>

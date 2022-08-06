@@ -7,11 +7,11 @@ import { images } from '@config/images';
 export function RecoverPassword() {
   return (
     <AuthLayout
-      imageURI={images.SadGirl}
+      imageURI={images.sad_girl}
       textFooter="Já recuperou a conta?"
       textFooterAction="Entrar"
       routeToNavigate={'signIn'}>
-      <Stack mb={6} space={4}>
+      <Stack mb={6} space={2}>
         <Heading>Recuperação de conta</Heading>
         <Text color={'gray.700'}>
           Informe o seu e-mail e deixe o resto conosco

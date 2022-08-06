@@ -7,11 +7,11 @@ import { images } from '@config/images';
 export function SignIn() {
   return (
     <AuthLayout
-      imageURI={images.CallSupport}
+      imageURI={images.call_support}
       textFooter="Ainda não possui conta?"
       textFooterAction="Cadastre-se"
       routeToNavigate={'signUp'}>
-      <Stack mb={6} space={4}>
+      <Stack mb={6} space={2}>
         <Heading>Login</Heading>
         <Text color={'gray.700'}>Faça login na sua conta</Text>
       </Stack>
