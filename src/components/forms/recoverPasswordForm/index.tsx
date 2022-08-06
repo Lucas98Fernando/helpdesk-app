@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Icon, Input, Stack } from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { useRecoverPassword } from '../../../hooks/auth';
+import { useRecoverPassword } from '@hooks/auth';
 
 export function RecoverPasswordForm() {
   const [email, setEmail] = useState('');

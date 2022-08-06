@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Icon, Input, Stack, Text } from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
-import { useSignIn } from '../../../hooks/auth';
+import { useSignIn } from '@hooks/auth';
 
 export function SignInForm() {
   const [email, setEmail] = useState('');

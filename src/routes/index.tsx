@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 import { NavigationContainer } from '@react-navigation/native';
 import { AuthRoutes } from './auth.routes';
-import { Home } from '@screens/home';
+import { HomeRoutes } from './home.routes';
 
 export function Routes() {
   const [user, setUser] = useState<FirebaseAuthTypes.User | null>(null);
@@ -14,7 +14,7 @@ export function Routes() {
 
   return (
     <NavigationContainer>
-      {user ? <Home /> : <AuthRoutes />}
+      {user ? <HomeRoutes /> : <AuthRoutes />}
     </NavigationContainer>
   );
 }

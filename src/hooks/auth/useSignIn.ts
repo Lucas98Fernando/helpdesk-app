@@ -7,8 +7,6 @@ export function useSignIn() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  // const navigation: Record<any, any> = useNavigation();
-
   const handleSignIn = async ({ email, password }: User) => {
     try {
       setLoading(true);

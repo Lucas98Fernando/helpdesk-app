@@ -12,6 +12,7 @@
       "@layouts/*": ["./src/layouts/*"],
       "@screens/*": ["./src/screens/*"],
       "@types/*": ["./src/types/*"],
+      "@hooks/*": ["./src/hooks/*"],
     }
   }
 }

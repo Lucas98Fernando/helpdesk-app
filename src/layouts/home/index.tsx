@@ -1,10 +1,12 @@
-import React from 'react';
-import { Text, View } from 'native-base';
+import React, { PropsWithChildren } from 'react';
+import { Container, View } from 'native-base';
+import { Header } from '@components/header';
 
-export function HomeLayout() {
+export function HomeLayout({ children }: PropsWithChildren) {
   return (
-    <View>
-      <Text>Layout</Text>
+    <View pt={4} px={4}>
+      <Header />
+      <Container>{children}</Container>
     </View>
   );
 }

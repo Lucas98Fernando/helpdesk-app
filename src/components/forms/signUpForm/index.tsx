@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Icon, Input, Stack } from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { useSignUp } from '../../../hooks/auth';
+import { useSignUp } from '@hooks/auth';
 
 export function SignUpForm() {
   const [email, setEmail] = useState('');
