@@ -1,12 +1,22 @@
 import React, { PropsWithChildren } from 'react';
-import { Container, View } from 'native-base';
+import { View } from 'native-base';
 import { Header } from '@components/header';
 
-export function HomeLayout({ children }: PropsWithChildren) {
+interface FooterProps {
+  footerContent?: JSX.Element;
+}
+
+export function HomeLayout({
+  children,
+  footerContent,
+}: PropsWithChildren<FooterProps>) {
   return (
-    <View pt={4} px={4}>
-      <Header />
-      <Container>{children}</Container>
+    <View flex={1} justifyContent={'space-between'} pt={4} px={4}>
+      <View>
+        <Header />
+        <View>{children}</View>
+      </View>
+      {footerContent}
     </View>
   );
 }

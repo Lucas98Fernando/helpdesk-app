@@ -56,7 +56,7 @@ export function SignUpForm() {
         placeholder="Senha"
       />
       <Button
-        color={'primary.500'}
+        colorScheme={'primary'}
         rounded={10}
         isLoading={loading}
         isLoadingText="Entrando..."

@@ -66,7 +66,7 @@ export function SignInForm() {
         Esqueceu sua senha?
       </Text>
       <Button
-        color={'primary.500'}
+        colorScheme={'primary'}
         rounded={10}
         leftIcon={
           <Icon

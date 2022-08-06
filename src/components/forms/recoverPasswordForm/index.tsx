@@ -26,7 +26,7 @@ export function RecoverPasswordForm() {
         placeholder="E-mail"
       />
       <Button
-        color={'primary.500'}
+        colorScheme={'primary'}
         rounded={10}
         isLoading={loading}
         isLoadingText="Enviando e-mail..."
