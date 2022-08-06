@@ -1,5 +1,7 @@
+import { ImageSourcePropType } from 'react-native';
+
 export type AuthLayoutProps = {
-  imageURI?: string;
+  imageURI: ImageSourcePropType;
   textFooter?: string;
   textFooterAction?: string;
   routeToNavigate: string;

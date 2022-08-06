@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Button, Icon, Input, Stack, Text } from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { useNavigation } from '@react-navigation/native';
 
 export function SignInForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading] = useState(false);
+
+  const navigation: Record<any, any> = useNavigation();
 
   return (
     <Stack space={5} w="100%" alignItems="center">
@@ -48,7 +51,11 @@ export function SignInForm() {
         }
         placeholder="Senha"
       />
-      <Text fontSize={'xs'} alignSelf={'flex-start'}>
+      <Text
+        color={'primary.500'}
+        fontSize={'xs'}
+        alignSelf={'flex-start'}
+        onPress={() => navigation.navigate('recoverPassword')}>
         Esqueceu sua senha?
       </Text>
       <Button

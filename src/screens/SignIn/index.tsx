@@ -1,8 +1,8 @@
 import React from 'react';
 import { Heading, Stack, Text } from 'native-base';
-import { SignInForm } from '../../components/Forms/SignInForm';
-import { AuthLayout } from '../../layouts/auth';
-import images from '../../assets/images';
+import { SignInForm } from '@components/forms/signInForm';
+import { AuthLayout } from '@layouts/auth';
+import { images } from '@config/images';
 
 export function SignIn() {
   return (

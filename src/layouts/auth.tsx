@@ -1,7 +1,9 @@
 import React, { PropsWithChildren } from 'react';
-import { Center, Container, Image, Text } from 'native-base';
+import { Center, Container, Text } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
-import { AuthLayoutProps } from '../types';
+import { AuthLayoutProps } from '@/types';
+import { Image } from 'react-native';
+import styles from './styles';
 
 export function AuthLayout({
   children,
@@ -16,13 +18,7 @@ export function AuthLayout({
   return (
     <Center flex={1} flexDirection={'column'} justifyContent="space-between">
       <Container top={5}>
-        <Image
-          source={{
-            uri: imageURI,
-          }}
-          alt="Auth Image"
-          size={150}
-        />
+        <Image source={imageURI} style={styles.logo} />
       </Container>
       <Container>{children}</Container>
       <Center flexDirection={'row'} bottom={5}>

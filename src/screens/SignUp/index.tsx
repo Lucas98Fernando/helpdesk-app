@@ -1,8 +1,8 @@
 import React from 'react';
 import { Heading, Stack, Text } from 'native-base';
-import { SignUpForm } from '../../components/Forms/SignUpForm';
-import { AuthLayout } from '../../layouts/auth';
-import images from '../../assets/images';
+import { SignUpForm } from '@components/forms/signUpForm';
+import { AuthLayout } from '@layouts/auth';
+import { images } from '@config/images';
 
 export function SignUp() {
   return (
