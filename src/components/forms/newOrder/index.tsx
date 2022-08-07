@@ -24,7 +24,7 @@ export function NewOrderForm() {
             color="muted.400"
           />
         }
-        placeholder="Nome do patrimônio"
+        placeholder="Número do patrimônio"
       />
       <TextArea
         autoCompleteType

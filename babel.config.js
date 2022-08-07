@@ -8,6 +8,7 @@ module.exports = {
         root: ['./src'],
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
         alias: {
+          '@/*': './src',
           '@assets': './src/assets',
           '@components': './src/components',
           '@config': './src/config',
@@ -15,6 +16,7 @@ module.exports = {
           '@screens': './src/screens',
           '@types': './src/types',
           '@hooks': './src/hooks',
+          '@context': './src/context',
         },
       },
     ],

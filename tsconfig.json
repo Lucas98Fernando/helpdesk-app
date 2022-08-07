@@ -13,6 +13,7 @@
       "@screens/*": ["./src/screens/*"],
       "@types/*": ["./src/types/*"],
       "@hooks/*": ["./src/hooks/*"],
+      "@context/*": ["./src/context/*"],
     }
   }
 }

@@ -10,3 +10,5 @@ export type NewOrder = {
   patrimony: string;
   description: string;
 };
+
+export type StatusOrder = 'open' | 'closed';
