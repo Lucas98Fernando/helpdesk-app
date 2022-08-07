@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Icon, Input, Stack, Text } from 'native-base';
+import { Button, Icon, Input, VStack, Text } from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import { useSignIn } from '@hooks/auth';
@@ -13,7 +13,7 @@ export function SignInForm() {
   const navigation: Record<any, any> = useNavigation();
 
   return (
-    <Stack space={5} w="100%" alignItems="center">
+    <VStack space={5} w="100%" alignItems="center">
       <Input
         value={email}
         onChangeText={setEmail}
@@ -66,6 +66,7 @@ export function SignInForm() {
         Esqueceu sua senha?
       </Text>
       <Button
+        w={'100%'}
         colorScheme={'primary'}
         rounded={10}
         leftIcon={
@@ -81,6 +82,6 @@ export function SignInForm() {
         onPress={() => handleSignIn({ email, password })}>
         Entrar
       </Button>
-    </Stack>
+    </VStack>
   );
 }

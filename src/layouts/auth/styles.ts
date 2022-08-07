@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
   scrollView: {
     flexGrow: 1,
     justifyContent: 'center',
+    paddingHorizontal: 40,
   },
   logo: {
     resizeMode: 'contain',

@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { Center, Container, ScrollView, Text } from 'native-base';
+import { Center, ScrollView, Text, View } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
 import { AuthLayoutProps } from '@/types';
 import { Image } from 'react-native';
@@ -17,11 +17,11 @@ export function AuthLayout({
 
   return (
     <ScrollView _contentContainerStyle={styles.scrollView}>
-      <Center>
-        <Container>
+      <View>
+        <Center>
           <Image source={imageURI} style={styles.logo} />
-        </Container>
-        <Container mb={10}>{children}</Container>
+        </Center>
+        <View mb={10}>{children}</View>
         <Center flexDirection={'row'}>
           <Text mr={2}>{textFooter}</Text>
           <Text
@@ -30,7 +30,7 @@ export function AuthLayout({
             {textFooterAction}
           </Text>
         </Center>
-      </Center>
+      </View>
     </ScrollView>
   );
 }

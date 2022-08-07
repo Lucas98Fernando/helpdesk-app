@@ -12,9 +12,8 @@ export function useSignIn() {
       setLoading(true);
       await auth().signInWithEmailAndPassword(email, password);
     } catch (error) {
-      Alert.alert('Algo aconteceu', 'Não foi possível fazer login');
-    } finally {
       setLoading(false);
+      Alert.alert('Algo aconteceu', 'Não foi possível fazer login');
     }
   };
 

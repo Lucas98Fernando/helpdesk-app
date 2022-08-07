@@ -26,6 +26,7 @@ export function RecoverPasswordForm() {
         placeholder="E-mail"
       />
       <Button
+        w={'100%'}
         colorScheme={'primary'}
         rounded={10}
         isLoading={loading}

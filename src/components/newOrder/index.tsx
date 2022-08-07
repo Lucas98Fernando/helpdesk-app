@@ -16,6 +16,7 @@ export function NewOrder() {
   return (
     <Center mb={4}>
       <Button
+        w={'100%'}
         rounded={'lg'}
         colorScheme={'primary'}
         onPress={onOpen}

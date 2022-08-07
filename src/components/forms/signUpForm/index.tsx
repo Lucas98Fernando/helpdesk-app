@@ -56,6 +56,7 @@ export function SignUpForm() {
         placeholder="Senha"
       />
       <Button
+        w={'100%'}
         colorScheme={'primary'}
         rounded={10}
         isLoading={loading}
