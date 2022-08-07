@@ -12,7 +12,7 @@ export function Logout() {
 
   return (
     <Box textAlign={'start'}>
-      <Button bgColor={'red.600'} onPress={() => setIsOpen(!isOpen)}>
+      <Button colorScheme={'danger'} onPress={() => setIsOpen(!isOpen)}>
         <Icon as={<MaterialIcons name="logout" />} size={5} color="white" />
       </Button>
       <AlertDialog

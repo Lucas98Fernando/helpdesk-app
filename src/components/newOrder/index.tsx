@@ -1,14 +1,14 @@
 import React from 'react';
 import {
   Actionsheet,
-  Box,
   Button,
   Center,
+  Heading,
   Icon,
-  Text,
   useDisclose,
 } from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { NewOrderForm } from '@components/forms/newOrder';
 
 export function NewOrder() {
   const { isOpen, onOpen, onClose } = useDisclose();
@@ -31,18 +31,14 @@ export function NewOrder() {
         Novo chamado
       </Button>
       <Actionsheet isOpen={isOpen} onClose={onClose}>
-        <Actionsheet.Content>
-          <Box w="100%" h={60} px={4} justifyContent="center">
-            <Text
-              fontSize="16"
-              color="gray.500"
-              _dark={{
-                color: 'gray.300',
-              }}>
+        <Actionsheet.Content px={4} py={6}>
+          <Center h={60}>
+            <Heading fontSize="20" color="gray.700">
               Criar novo chamado
-            </Text>
-          </Box>
-          <Actionsheet.Item>Delete</Actionsheet.Item>
+            </Heading>
+          </Center>
+
+          <NewOrderForm />
         </Actionsheet.Content>
       </Actionsheet>
     </Center>

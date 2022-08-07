@@ -9,8 +9,12 @@ export function useSignIn() {
 
   const handleSignIn = async ({ email, password }: User) => {
     try {
-      setLoading(true);
-      await auth().signInWithEmailAndPassword(email, password);
+      if (email && password) {
+        setLoading(true);
+        await auth().signInWithEmailAndPassword(email, password);
+      } else {
+        Alert.alert('Aviso', 'Informe o e-mail e senha');
+      }
     } catch (error) {
       setLoading(false);
       Alert.alert('Algo aconteceu', 'Não foi possível fazer login');
