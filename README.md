@@ -17,13 +17,13 @@
 **HTTPS**
 
 ```
-git clone https://github.com/Lucas98Fernando/reactjs-pokedex.git
+git clone https://github.com/Lucas98Fernando/helpdesk-app.git
 ```
 
 **SSH**
 
 ```
-git clone git@github.com:Lucas98Fernando/reactjs-pokedex.git
+git clone git@github.com:Lucas98Fernando/helpdesk-app.git
 ```
 
 ### :two: Install dependencies
