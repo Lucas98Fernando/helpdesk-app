@@ -12,10 +12,17 @@ export function useSignUp() {
 
   const handleSignUp = async ({ email, password }: User) => {
     try {
-      setLoading(true);
-      await auth().createUserWithEmailAndPassword(email, password);
-      Alert.alert('Muito bem', 'Conta criada com sucesso!');
-      navigation.navigate('signIn');
+      if (email && password) {
+        setLoading(true);
+        await auth().createUserWithEmailAndPassword(email, password);
+        Alert.alert('Muito bem', 'Conta criada com sucesso!');
+        navigation.navigate('signIn');
+      } else {
+        Alert.alert(
+          'Aviso',
+          'É preciso informar o e-mail e senha para prosseguir',
+        );
+      }
     } catch (error) {
       Alert.alert('Algo aconteceu', 'Não foi possível criar o usuário');
     } finally {
