@@ -58,6 +58,8 @@ yarn
 
 - How to generate this file? [See the documentation here](https://support.google.com/firebase/answer/7015592?hl=pt-BR#zippy=%2Cneste-artigo).
 
+- Then, add the file to the directory: <code>rootFolder/android/app</code>
+
 ### :four: Start Metro Bundle
 
 **NPM**
