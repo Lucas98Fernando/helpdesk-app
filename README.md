@@ -2,6 +2,11 @@
 
 - Application developed with React Native, TypeScript, Firebase and NativeBase UI
 
+<p>
+  <img src="https://user-images.githubusercontent.com/55029511/205421365-3b8a683c-52fb-4660-80e7-56408bd92ce8.png" width="250">
+  <img src="https://user-images.githubusercontent.com/55029511/205421389-2852a45d-7257-4461-a4b7-de54563454be.png" width="250">
+</p>
+
 ### :computer: Developed with:
 
 - [React Native](https://reactnative.dev/)
